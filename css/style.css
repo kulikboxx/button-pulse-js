@@ -1,0 +1,68 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background-color: #191919;
+}
+
+.button {
+  position: relative;
+  padding: 1.2rem 3rem;
+  color: white;
+  font-size: 2rem;
+  font-family: system-ui;
+  font-weight: bold;
+  text-decoration: none;
+  background-image: linear-gradient(60deg, #4222dc 0%, #5461f8 100%);
+  border: none;
+  border-radius: 40px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0);
+  background: #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.3;
+  -webkit-animation: pulse 0.4s ease-in forwards;
+  animation: pulse 0.4s ease-in forwards;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
